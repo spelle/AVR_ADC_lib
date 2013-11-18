@@ -14,7 +14,7 @@
 void ADC_SelectVoltageReference( eVotltageReference_t eVotltageReference )
 {
 	// Select the voltage reference
-	ADMUX |= (eVotltageReference<<REFS0) ;
+	ADMUX = (ADMUX & 0x3F) & ( (eVotltageReference & 0x03)<<REFS0 ) ;
 }
 
 

@@ -14,9 +14,9 @@
 
 
 
-//	24.9.1 ADMUX � ADC Multiplexer Selection Register
+//	24.9.1 ADMUX - ADC Multiplexer Selection Register
 //
-//	 Bit 7:6 � REFS[1:0]: Reference Selection Bits
+//	 Bit 7:6 - REFS[1:0]: Reference Selection Bits
 //	These bits select the voltage reference for the ADC, as shown in  Table 24-3 . If these bits are changed during a
 //	conversion, the change will not go in effect until this conversion is complete  (ADIF in ADCSRA is set). The internal
 //	voltage reference options may not be used if an external reference voltage is being applied to the AREF pin.
