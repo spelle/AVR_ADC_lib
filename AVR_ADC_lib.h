@@ -14,9 +14,9 @@
 
 
 
-//	24.9.1 ADMUX – ADC Multiplexer Selection Register
+//	24.9.1 ADMUX ï¿½ ADC Multiplexer Selection Register
 //
-//	 Bit 7:6 – REFS[1:0]: Reference Selection Bits
+//	 Bit 7:6 ï¿½ REFS[1:0]: Reference Selection Bits
 //	These bits select the voltage reference for the ADC, as shown in  Table 24-3 . If these bits are changed during a
 //	conversion, the change will not go in effect until this conversion is complete  (ADIF in ADCSRA is set). The internal
 //	voltage reference options may not be used if an external reference voltage is being applied to the AREF pin.
@@ -37,9 +37,9 @@ typedef enum
 
 
 
-/*	24.9.2 ADCSRA – ADC Control and Status Register A
+/*	24.9.2 ADCSRA ï¿½ ADC Control and Status Register A
  *
- *  Bits 2:0 – ADPS[2:0]: ADC Prescaler Select Bits
+ *  Bits 2:0 ï¿½ ADPS[2:0]: ADC Prescaler Select Bits
  *	These bits determine the division factor between the system clock frequency and the input clock to the ADC.
  *	Table 24-5. ADC Prescaler Selections
  *
@@ -106,6 +106,15 @@ void ADC_Enable( ) ;
  *  \return Nothing.
  */
 void ADC_Disable( ) ;
+
+
+
+/*! \brief
+ *  \details
+ *  \param [in] uint16_t
+ *  \return Nothing.
+ */
+void ADC_Start( ) ;
 
 
 

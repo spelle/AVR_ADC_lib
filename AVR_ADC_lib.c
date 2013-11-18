@@ -53,6 +53,14 @@ void ADC_Disable( )
 
 
 
+void ADC_Start( )
+{
+	// Start the Conversion
+	ADCSRA |= (1 << ADSC) ;
+}
+
+
+
 uint16_t ADC_Read( )
 {
 	// Read the ADC value
