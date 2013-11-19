@@ -14,21 +14,21 @@
 void ADC_SelectVoltageReference( eVotltageReference_t eVotltageReference )
 {
 	// Select the voltage reference
-	ADMUX = (ADMUX & 0x3F) & ( (eVotltageReference & 0x03)<<REFS0 ) ;
+	ADMUX = (ADMUX & 0x3F) | ( (eVotltageReference & 0x03)<<REFS0 ) ;
 }
 
 
 
 void ADC_SelectChannel( char cChannel )
 {
-	ADMUX = (ADMUX & 0xF0) & (cChannel & 0x0F) ;
+	ADMUX = (ADMUX & 0xF0) | (cChannel & 0x0F) ;
 }
 
 
 
 void ADC_SelectPrescaler( ePrescaler_t ePrescaler )
 {
-	ADCSRA = (ADCSRA & 0xF8) & (ePrescaler & 0x07) ;
+	ADCSRA = (ADCSRA & 0xF8) | (ePrescaler & 0x07) ;
 }
 
 
